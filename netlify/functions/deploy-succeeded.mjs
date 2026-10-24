@@ -1,9 +1,8 @@
 // Runs automatically after every successful Netlify deploy.
 // Tells IndexNow (Bing, Yandex, Seznam, Naver and others) which pages changed:
 // the front page, the section pages and every article from the last 48 hours.
-import { readFileSync } from "node:fs";
-
 const SITE = "https://latinogazette.com";
+const KEY = "53dc4da07a96248f75f497904fb1ef25"; // also served at /<key>.txt (see site.json)
 const SECTIONS = ["nation", "politics", "elections", "business", "communities", "culture", "opinion", "wellbeing"];
 
 export const handler = async (event) => {
@@ -12,7 +11,7 @@ export const handler = async (event) => {
   if (deploy.context && deploy.context !== "production") {
     return { statusCode: 200, body: "skipped: not production" };
   }
-  const key = process.env.INDEXNOW_KEY || JSON.parse(readFileSync(new URL("../../site.json", import.meta.url))).indexnow_key;
+  const key = process.env.INDEXNOW_KEY || KEY;
   const host = new URL(SITE).host;
 
   let recent = [];
