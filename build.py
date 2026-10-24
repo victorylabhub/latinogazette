@@ -262,10 +262,18 @@ def build():
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{base}{u}</loc></url>\n" for u in urls) + "</urlset>\n",
         encoding="utf-8")
+    recent = [a for a in arts if (dt.datetime.now(ET) - a["date"]).days < 2]
+    (DIST / "news-sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
+        + "".join(f"  <url><loc>{base}{a['url']}</loc><news:news><news:publication><news:name>Latino Gazette</news:name>"
+                  f"<news:language>en</news:language></news:publication><news:publication_date>{a['date'].isoformat()}"
+                  f"</news:publication_date><news:title>{esc(a['title'])}</news:title></news:news></url>\n" for a in recent)
+        + "</urlset>\n", encoding="utf-8")
     noindex = SITE.get("noindex")
     (DIST / "robots.txt").write_text(
         ("User-agent: *\nDisallow: /\n" if noindex else "User-agent: *\nDisallow: /admin/\n")
-        + f"Sitemap: {base}/sitemap.xml\n", encoding="utf-8")
+        + f"Sitemap: {base}/sitemap.xml\nSitemap: {base}/news-sitemap.xml\n", encoding="utf-8")
     print(f"✓ dist/ ready: {len(urls)} pages, {len(arts)} articles, {len(res)} results links, "
           f"{len(groups)} closing groups")
 
