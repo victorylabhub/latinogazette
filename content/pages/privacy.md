@@ -1,7 +1,7 @@
 ---
 title: Privacy notice
 description: What information Latino Gazette collects and how it is used.
-updated: 2026-10-23
+updated: 2026-10-24
 ---
 Latino Gazette is published by Atlas Media Network, LLC, 36 Russ Street, 3rd Floor, Hartford, CT 06106, United States ("we"). This notice explains what information we collect through latinogazette.com.
 
@@ -13,7 +13,9 @@ Latino Gazette is published by Atlas Media Network, LLC, 36 Russ Street, 3rd Flo
 
 **Technical information.** Our website is hosted by Netlify, Inc. Like most web hosts, Netlify processes technical data such as IP addresses and browser information to deliver the site and protect it from abuse.
 
-We do not use advertising cookies, and we do not run third-party advertising or tracking scripts on this website.
+**Google News tools.** Our pages load a script from Google (Google News Reader Revenue Manager) that connects the site with Google News features. Google may process information such as your IP address and browser data under the [Google Privacy Policy](https://policies.google.com/privacy).
+
+We do not use advertising cookies, and we do not run third-party advertising scripts on this website.
 
 ## Links to other sites
 

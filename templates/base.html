@@ -28,6 +28,17 @@
  "correctionsPolicy":"https://{{ site.domain }}/corrections/","email":{{ site.email|tojson }},
  "parentOrganization":{"@type":"Organization","name":{{ site.owner|tojson }},"url":{{ site.owner_url|tojson }},"address":{{ site.address|tojson }}}}
 </script>
+<script async type="application/javascript" src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+<script>
+  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+    basicSubscriptions.init({
+      type: "NewsArticle",
+      isPartOfType: ["Product"],
+      isPartOfProductId: "CAow_I_iCw:openaccess",
+      clientOptions: { theme: "light", lang: "en" },
+    });
+  });
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
