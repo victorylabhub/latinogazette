@@ -270,6 +270,8 @@ def build():
                   f"<news:language>en</news:language></news:publication><news:publication_date>{a['date'].isoformat()}"
                   f"</news:publication_date><news:title>{esc(a['title'])}</news:title></news:news></url>\n" for a in recent)
         + "</urlset>\n", encoding="utf-8")
+    if SITE.get("indexnow_key"):
+        (DIST / f"{SITE['indexnow_key']}.txt").write_text(SITE["indexnow_key"], encoding="utf-8")
     noindex = SITE.get("noindex")
     (DIST / "robots.txt").write_text(
         ("User-agent: *\nDisallow: /\n" if noindex else "User-agent: *\nDisallow: /admin/\n")

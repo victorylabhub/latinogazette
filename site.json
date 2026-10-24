@@ -11,5 +11,6 @@
   "owner_url": "https://www.atlasmedianetwork.org",
   "election_date": "2026-11-03",
   "show_elections_until": "2026-11-10",
-  "noindex": false
+  "noindex": false,
+  "indexnow_key": "53dc4da07a96248f75f497904fb1ef25"
 }
