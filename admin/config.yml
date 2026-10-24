@@ -79,3 +79,4 @@ collections:
       - { label: Corrections, name: corrections, file: content/pages/corrections.md, fields: *pagefields }
       - { label: Contact, name: contact, file: content/pages/contact.md, fields: *pagefields }
       - { label: Privacy notice, name: privacy, file: content/pages/privacy.md, fields: *pagefields }
+      - { label: Terms of use, name: terms, file: content/pages/terms.md, fields: *pagefields }
