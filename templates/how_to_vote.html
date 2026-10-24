@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block canonical %}/how-to-vote/{% endblock %}
+{% block main %}
+<article class="story wrap guide">
+  <header class="story-h">
+    <a class="kick" href="/elections/">Elections · Voting guide</a>
+    <h1>{{ title }}</h1>
+    <p class="story-dek">{{ lede }}</p>
+  </header>
+
+  <form class="picker" id="picker" action="https://vote.gov/" method="get">
+    <label for="state">Which state do you vote in?</label>
+    <div class="picker-row">
+      <select id="state" required>
+        <option value="" disabled selected>Choose your state</option>
+        {% for code, name in states %}<option value="{{ code }}">{{ name }}</option>{% endfor %}
+      </select>
+      <button type="submit">See official rules</button>
+    </div>
+    <p class="picker-note">This opens your state's page on vote.gov, the U.S. government's official voting portal. Latino Gazette does not receive your selection.</p>
+  </form>
+
+  <div class="prose">
+    <h2>1. Check that you can vote</h2>
+    <p>To vote in a federal election you must be a U.S. citizen, meet your state's residency requirements and be 18 on or before Election Day. Permanent residents and other noncitizens cannot vote in federal or state elections. Rules for people with felony convictions vary by state. <a href="https://www.usa.gov/who-can-vote">Source: USA.gov</a></p>
+
+    <h2>2. Register, or confirm you are registered</h2>
+    <p>Every state except North Dakota requires voters to register, and deadlines differ. Some states let you register on Election Day; others close registration weeks earlier. Use <a href="https://vote.gov">vote.gov</a> or the picker above to check your state's deadline and confirm your status.</p>
+
+    <h2>3. Know your state's ID rules</h2>
+    <p>Some states require photo identification, others accept other documents, and others do not ask registered voters for ID at the polls. Under federal law, some first-time voters who registered by mail may be asked for identification (<a href="https://www.law.cornell.edu/uscode/text/52/21083">52 U.S.C. 21083</a>). Your state's page on vote.gov links to the official list.</p>
+
+    <h2>4. Choose how you will vote</h2>
+    <p><strong>By mail.</strong> Every state offers some form of mail or absentee voting. Some require an excuse, and each sets its own deadlines to request and return a ballot. Follow the instructions from your election office exactly.</p>
+    <p><strong>Early, in person.</strong> Many states open voting locations before Election Day, on different schedules.</p>
+    <p><strong>On Election Day.</strong> Tuesday, Nov. 3, 2026. Your polling place depends on your address; your <a href="https://www.usa.gov/state-election-office">state or local election office</a> publishes locations and hours. Closing times by state are on our <a href="/election-night/">election night page</a>.</p>
+
+    <h2>5. Your rights at the polls</h2>
+    <ul>
+      <li><strong>Help in the voting booth.</strong> A voter who needs help because of blindness, a disability or an inability to read or write may be assisted by a person of their choice, other than their employer or union officer or agent. (<a href="https://www.law.cornell.edu/uscode/text/52/10508">Voting Rights Act, Section 208; 52 U.S.C. 10508</a>)</li>
+      <li><strong>Materials in Spanish.</strong> Jurisdictions covered by Section 203 of the Voting Rights Act must provide registration and voting materials, ballots and assistance in the covered language as well as English. (<a href="https://www.law.cornell.edu/uscode/text/52/10503">52 U.S.C. 10503</a>)</li>
+      <li><strong>Provisional ballots.</strong> If your name is not on the list, or an official says you are not eligible, and you believe you are registered and eligible, you can cast a provisional ballot. It is counted if election officials confirm your eligibility. (<a href="https://www.law.cornell.edu/uscode/text/52/21082">Help America Vote Act; 52 U.S.C. 21082</a>)</li>
+      <li><strong>At closing time.</strong> If polls are closing while you are waiting, stay in line and ask a poll worker.</li>
+    </ul>
+
+    <h2>Voting from abroad or in the military</h2>
+    <p>U.S. citizens overseas and members of the military and their families can register and request a ballot through the <a href="https://www.fvap.gov">Federal Voting Assistance Program</a>.</p>
+  </div>
+
+  {% if hotlines %}
+  <section class="help" id="help" aria-labelledby="help-h">
+    <h2 id="help-h">Trouble voting? Call for help.</h2>
+    <p>Free, nonpartisan hotlines run by the Election Protection coalition.</p>
+    <div class="lines">
+      {% for l in hotlines %}<a class="line" href="tel:+1{{ l.tel }}"><span>{{ l.label }}</span><strong>{{ l.show }}</strong><span>{{ l.num }}</span></a>{% endfor %}
+    </div>
+    <p class="src">Source: <a href="https://866ourvote.org">Election Protection</a></p>
+  </section>
+  {% endif %}
+  <p class="updated">Last reviewed <time datetime="{{ site.today.isoformat() }}">{{ site.today|apdate }}</time>. Rules change; always confirm with your election office.</p>
+</article>
+{% endblock %}

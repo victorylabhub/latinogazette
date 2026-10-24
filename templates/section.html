@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "macros.html" import card, img, byline, vote_box %}
+{% block canonical %}/{{ sec.slug }}/{% endblock %}
+{% block main %}
+<div class="wrap">
+  <header class="sec-h">
+    <h1>{{ sec.name }}</h1>
+    <p>{{ sec.desc }}</p>
+  </header>
+  {% if sec.slug == 'elections' %}{{ vote_box(site) }}{% endif %}
+  {% if items %}
+    {% set first = items[0] %}
+    <article class="sec-lead">
+      <a href="{{ first.url }}">{{ img(first, "16/9", eager=true) }}</a>
+      <div>
+        <h2><a href="{{ first.url }}">{{ first.title }}</a></h2>
+        {% if first.dek %}<p class="lead-dek">{{ first.dek }}</p>{% endif %}
+        {{ byline(first, true) }}
+      </div>
+    </article>
+    {% if items|length > 1 %}<div class="g4 sec-grid">{% for a in items[1:] %}{{ card(a, kicker=false) }}{% endfor %}</div>{% endif %}
+  {% elif sec.slug != 'elections' %}
+    <p class="empty">Reporting from our {{ sec.name|lower }} desk will appear here. Meanwhile, browse <a href="/">the front page</a>.</p>
+  {% endif %}
+</div>
+{% endblock %}

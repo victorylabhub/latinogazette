@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "macros.html" import card, img, byline, opcard, vote_box %}
+{% block canonical %}/{% endblock %}
+{% block main %}
+<div class="wrap">
+{% if lead %}
+  <section class="lead" aria-label="Top stories">
+    <article class="lead-main">
+      <a href="{{ lead.url }}">{{ img(lead, "16/9", eager=true) }}</a>
+      <a class="kick" href="/{{ lead.section }}/">{{ lead.sec.name }}</a>
+      <h2 class="lead-h"><a href="{{ lead.url }}">{{ lead.title }}</a></h2>
+      {% if lead.dek %}<p class="lead-dek">{{ lead.dek }}</p>{% endif %}
+      {{ byline(lead, true) }}
+    </article>
+    <div class="lead-side">
+      {% for a in side %}
+      <article><a class="kick" href="/{{ a.section }}/">{{ a.sec.name }}</a><h3><a href="{{ a.url }}">{{ a.title }}</a></h3>{{ byline(a) }}</article>
+      {% endfor %}
+      {% if site.elections_on and side|length < 4 %}{{ vote_box(site) }}{% endif %}
+    </div>
+  </section>
+{% else %}
+  <section class="lead lead-service" aria-labelledby="svc-h">
+    <div class="lead-main">
+      <a href="/how-to-vote/"><img class="ph" src="/static/img/photos/puerto-rican-parade-flag-1200.webp" srcset="/static/img/photos/puerto-rican-parade-flag-600.webp 600w, /static/img/photos/puerto-rican-parade-flag-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 66vw" alt="A young man in a Puerto Rican flag bucket hat holds a large flag at a parade in New York." style="aspect-ratio:16/9;object-position:50% 30%"></a>
+      <a class="kick" href="/elections/">Elections</a>
+      <h2 class="lead-h" id="svc-h"><a href="/how-to-vote/">Election Day is Tuesday, Nov. 3. Here's how to make sure your vote counts.</a></h2>
+      <p class="lead-dek">Registration, ID rules, mail ballots and polling places differ from state to state. Our guide points you to the official source for each step.</p>
+    </div>
+    <div class="lead-side">
+      <article><a class="kick" href="/election-night/">Election night</a><h3><a href="/election-night/">When polls close in every state, and where to find official results</a></h3></article>
+      <article><a class="kick" href="/how-to-vote/">Voting guide</a><h3><a href="/how-to-vote/">Find your state's registration, ID and mail-ballot rules on vote.gov</a></h3></article>
+      <article><a class="kick" href="/how-to-vote/#help">Help at the polls</a><h3><a href="/how-to-vote/#help">Trouble voting? Free, nonpartisan hotlines in English and Spanish</a></h3></article>
+      <figure class="side-ph"><img class="ph" src="/static/img/photos/dominican-parade-family-600.webp" alt="Four friends smile at the Dominican Day Parade in New York, one wrapped in a Dominican flag." style="aspect-ratio:3/2" loading="lazy"></figure>
+    </div>
+  </section>
+{% endif %}
+
+{% if latest %}
+  <section aria-labelledby="latest-h">
+    <div class="rowh"><h2 id="latest-h">Latest</h2></div>
+    <div class="g4">{% for a in latest %}{{ card(a) }}{% endfor %}</div>
+  </section>
+{% endif %}
+
+{% if long_read %}
+  <section class="big" aria-label="The Long Read">
+    <a href="{{ long_read.url }}">{{ img(long_read, "4/3") }}</a>
+    <div class="big-t">
+      <p class="kick">The Long Read</p>
+      <h2><a href="{{ long_read.url }}">{{ long_read.title }}</a></h2>
+      {% if long_read.dek %}<p>{{ long_read.dek }}</p>{% endif %}
+      {{ byline(long_read, true) }}
+    </div>
+  </section>
+{% endif %}
+
+{% if site.elections_on and (not lead or side|length >= 4) %}{{ vote_box(site) }}{% endif %}
+
+{% if opinion %}
+  <section aria-labelledby="op-h">
+    <div class="rowh"><h2 id="op-h"><a href="/opinion/">Opinion</a></h2><a href="/opinion/">All opinion →</a></div>
+    <div class="op">{% for a in opinion %}{{ opcard(a) }}{% endfor %}</div>
+  </section>
+{% endif %}
+
+{% for sec, items in rows %}
+  <section aria-labelledby="row-{{ sec.slug }}">
+    <div class="rowh"><h2 id="row-{{ sec.slug }}"><a href="/{{ sec.slug }}/">{{ sec.name }}</a></h2><a href="/{{ sec.slug }}/">More {{ sec.name|lower }} →</a></div>
+    <div class="g4">{% for a in items %}{{ card(a, kicker=false) }}{% endfor %}</div>
+  </section>
+{% endfor %}
+
+{% if not has_articles %}
+  <section aria-labelledby="dir-h">
+    <div class="rowh"><h2 id="dir-h">Sections</h2></div>
+    <div class="dir">
+      {% for s in sections %}<a href="/{{ s.slug }}/"><strong>{{ s.name }}</strong><span>{{ s.desc }}</span></a>{% endfor %}
+    </div>
+  </section>
+{% endif %}
+</div>
+{% endblock %}

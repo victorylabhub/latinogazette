@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "macros.html" import card %}
+{% block canonical %}{{ a.url }}{% endblock %}
+{% block og %}<meta property="og:type" content="article">
+<meta property="og:image" content="https://{{ site.domain }}{{ a.image or '/static/img/og.jpg' }}">
+<meta property="article:published_time" content="{{ a.date.isoformat() }}">
+<meta property="article:section" content="{{ a.sec.name }}">{% endblock %}
+{% block main %}
+<article class="story wrap">
+  <header class="story-h">
+    <a class="kick" href="/{{ a.section }}/">{{ a.sec.name }}{% if a.place %} · {{ a.place }}{% endif %}</a>
+    <h1>{{ a.title }}</h1>
+    {% if a.dek %}<p class="story-dek">{{ a.dek }}</p>{% endif %}
+    <div class="meta">
+      <p>By <strong>{{ a.author }}</strong>{% if a.author_role %}<span class="role"> · {{ a.author_role }}</span>{% endif %}</p>
+      <p>Published <time datetime="{{ a.date.isoformat() }}">{{ a.date|apdate }}</time>{% if a.updated %} · Updated <time datetime="{{ a.updated.isoformat() }}">{{ a.updated|apdate }}</time>{% endif %}</p>
+    </div>
+  </header>
+  {% if a.image %}
+  <figure class="story-img">
+    <img src="{{ a.image }}" alt="{{ a.image_alt or '' }}">
+    {% if a.image_caption or a.image_credit %}<figcaption>{{ a.image_caption or '' }}{% if a.image_credit %} <span class="credit">{{ a.image_credit }}</span>{% endif %}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="prose">{{ a.html|safe }}</div>
+  {% if a.sources %}
+  <section class="sources" aria-labelledby="src-h">
+    <h2 id="src-h">Sources</h2>
+    <ol>{% for s in a.sources %}<li><a href="{{ s.url }}" rel="noopener">{{ s.title or s.url }}</a></li>{% endfor %}</ol>
+  </section>
+  {% endif %}
+  {% if a.correction %}<p class="correction"><strong>Correction:</strong> {{ a.correction }}</p>{% endif %}
+  <p class="report">See an error? Email <a href="mailto:{{ site.email }}?subject=Correction:%20{{ a.title|urlencode }}">{{ site.email }}</a>. Read our <a href="/corrections/">corrections policy</a>.</p>
+</article>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"{{ 'OpinionNewsArticle' if a.section == 'opinion' else 'NewsArticle' }}","headline":{{ a.title|tojson }},
+ "description":{{ (a.dek or '')|tojson }},"datePublished":"{{ a.date.isoformat() }}"{% if a.updated %},"dateModified":"{{ a.updated.isoformat() }}"{% endif %},
+ {% if a.image %}"image":["https://{{ site.domain }}{{ a.image }}"],{% endif %}
+ "author":{"@type":"Person","name":{{ a.author|tojson }}},
+ "publisher":{"@type":"NewsMediaOrganization","name":"Latino Gazette","logo":{"@type":"ImageObject","url":"https://{{ site.domain }}/static/img/icon-512.png"}},
+ "mainEntityOfPage":"https://{{ site.domain }}{{ a.url }}"}
+</script>
+{% if related %}
+<section class="wrap related" aria-labelledby="rel-h">
+  <div class="rowh"><h2 id="rel-h">More {{ a.sec.name|lower }}</h2></div>
+  <div class="g4">{% for r in related %}{{ card(r, dek=false, kicker=false) }}{% endfor %}</div>
+</section>
+{% endif %}
+{% endblock %}

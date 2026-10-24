@@ -1,0 +1,42 @@
+{% macro img(a, ratio="3/2", sizes="(max-width: 700px) 100vw, 33vw", eager=false) %}
+{%- if a.image -%}
+<img class="ph" src="{{ a.image }}" alt="{{ a.image_alt or '' }}" style="aspect-ratio:{{ ratio }}" {% if not eager %}loading="lazy"{% endif %} decoding="async">
+{%- endif -%}
+{% endmacro %}
+
+{% macro byline(a, read=false) -%}
+<p class="by">By {{ a.author }} · <time datetime="{{ a.date.isoformat() }}">{{ a.date|apdate }}</time>{% if read %} · {{ a.minutes }} min read{% endif %}</p>
+{%- endmacro %}
+
+{% macro card(a, dek=true, kicker=true) %}
+<article class="card">
+  <a href="{{ a.url }}">{{ img(a) }}</a>
+  {% if kicker %}<a class="kick" href="/{{ a.section }}/">{{ a.sec.name }}</a>{% endif %}
+  <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+  {% if dek and a.dek %}<p class="dek">{{ a.dek }}</p>{% endif %}
+  {{ byline(a) }}
+</article>
+{% endmacro %}
+
+{% macro opcard(a) %}
+<article class="opc">
+  <p class="who">{{ a.author }}</p>
+  <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+  <p class="by"><time datetime="{{ a.date.isoformat() }}">{{ a.date|apdate }}</time></p>
+</article>
+{% endmacro %}
+
+{% macro vote_box(site) %}
+<section class="vote" aria-labelledby="vote-h">
+  <div>
+    <p class="kick">Election 2026 · Tuesday, Nov. 3</p>
+    <h2 id="vote-h">Your vote, from official sources</h2>
+    <p>Registration deadlines, ID rules and polling places vary by state. We link directly to <a href="https://vote.gov">vote.gov</a> and to each state's election authority.</p>
+  </div>
+  <ul>
+    <li><a href="https://vote.gov">Register or check your registration <span>vote.gov →</span></a></li>
+    <li><a href="/how-to-vote/">How to vote, step by step <span>Guide →</span></a></li>
+    <li><a href="/election-night/">Poll closing times and official results <span>Election night →</span></a></li>
+  </ul>
+</section>
+{% endmacro %}

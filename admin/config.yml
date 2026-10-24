@@ -1,0 +1,81 @@
+# Latino Gazette newsroom (Decap CMS). Each article is saved as a Markdown
+# file in the repository; Netlify rebuilds the site when it is published.
+backend:
+  name: github
+  repo: victorylabhub/latinogazette
+  branch: main
+  site_domain: latinogazette.netlify.app
+  commit_messages:
+    create: "New article: {{slug}}"
+    update: "Edit article: {{slug}}"
+    delete: "Delete article: {{slug}}"
+    uploadMedia: "Upload image: {{path}}"
+
+# Draft → In review → Ready. Drafts live on their own branches until published.
+publish_mode: editorial_workflow
+
+site_url: https://latinogazette.com
+display_url: https://latinogazette.com
+logo_url: /static/img/icon-180.png
+media_folder: static/img/articles
+public_folder: /static/img/articles
+
+collections:
+  - name: articles
+    label: Articles
+    label_singular: Article
+    folder: content/articles
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{section}} · {{title}}"
+    sortable_fields: [date, title, section]
+    view_groups:
+      - { label: Section, field: section }
+    fields:
+      - { label: Headline, name: title, widget: string }
+      - label: Section
+        name: section
+        widget: select
+        options:
+          - { label: Nation, value: nation }
+          - { label: Politics, value: politics }
+          - { label: Elections, value: elections }
+          - { label: Business, value: business }
+          - { label: Communities, value: communities }
+          - { label: Culture, value: culture }
+          - { label: Opinion, value: opinion }
+          - { label: Wellbeing, value: wellbeing }
+      - { label: Standfirst (one or two sentences), name: dek, widget: text }
+      - { label: Author (byline), name: author, widget: string }
+      - { label: Author's title, name: author_role, widget: string, required: false, hint: "Example: Staff writer, Contributor" }
+      - { label: Dateline / place, name: place, widget: string, required: false, hint: "Example: New York" }
+      - { label: Publication date, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: Updated on, name: updated, widget: datetime, required: false, format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: Lead story on the front page, name: featured, widget: boolean, default: false, required: false }
+      - { label: The Long Read (feature), name: long_read, widget: boolean, default: false, required: false }
+      - { label: Main image, name: image, widget: image, required: false }
+      - { label: Image description (alt text), name: image_alt, widget: string, required: false, hint: "Describe the image for readers who can't see it." }
+      - { label: Caption, name: image_caption, widget: string, required: false }
+      - { label: Image credit, name: image_credit, widget: string, required: false, hint: "Example: Photographer Name / Pexels" }
+      - { label: Body, name: body, widget: markdown }
+      - label: Sources
+        name: sources
+        widget: list
+        allow_add: true
+        min: 1
+        hint: "Link every primary source behind the article's facts."
+        fields:
+          - { label: Source name, name: title, widget: string }
+          - { label: Link, name: url, widget: string, pattern: ['^https?://', "Must be a full link starting with http"] }
+      - { label: Correction note, name: correction, widget: text, required: false }
+
+  - name: pages
+    label: Pages
+    files:
+      - { label: About us, name: about, file: content/pages/about.md, fields: &pagefields [ { label: Title, name: title, widget: string }, { label: Description, name: description, widget: string }, { label: Last updated, name: updated, widget: datetime, format: "YYYY-MM-DD" }, { label: Body, name: body, widget: markdown } ] }
+      - { label: Editorial standards, name: standards, file: content/pages/standards.md, fields: *pagefields }
+      - { label: Corrections, name: corrections, file: content/pages/corrections.md, fields: *pagefields }
+      - { label: Contact, name: contact, file: content/pages/contact.md, fields: *pagefields }
+      - { label: Privacy notice, name: privacy, file: content/pages/privacy.md, fields: *pagefields }

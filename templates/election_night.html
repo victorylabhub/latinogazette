@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block canonical %}/election-night/{% endblock %}
+{% block main %}
+<section class="en-hero">
+  <div class="wrap">
+    <a class="kick" href="/elections/">Elections · Tuesday, Nov. 3, 2026</a>
+    <h1>{{ title }}</h1>
+    <p class="story-dek">{{ lede }}</p>
+    <p class="count" id="countdown" data-date="{{ site.election_date }}"></p>
+  </div>
+</section>
+<div class="wrap en">
+  {% if groups %}
+  <section aria-labelledby="cl-h">
+    <div class="rowh"><h2 id="cl-h">When polls close (Eastern Time)</h2></div>
+    <ol class="close-list">
+      {% for g in groups %}<li><b>{{ g.et }}{% if g.et in ['12:00 a.m.','1:00 a.m.'] %} <small>Nov. 4</small>{% endif %}</b><span>{{ g.names|join(', ') }}</span></li>{% endfor %}
+    </ol>
+    <p class="fine">Times show when most polls in each state close. Hours are set by state law and, in some states, by county or town; check your <a href="https://www.usa.gov/state-election-office">election office</a> for your polling place.{% if later %} States that span two time zones, or where closing is set locally, finish later:
+      {% for n, t in later %}{{ n }} ({{ t }}{% if t in ['12:00 a.m.','1:00 a.m.'] %} Nov. 4{% endif %}){{ ', ' if not loop.last else '.' }}{% endfor %}{% endif %}</p>
+  </section>
+  {% endif %}
+
+  <section aria-labelledby="res-h">
+    <div class="rowh"><h2 id="res-h">Official results by state</h2></div>
+    <p class="intro">Each link goes to the results page of that state's election authority. Latino Gazette does not publish its own vote counts or projections. Election-night numbers are unofficial; states certify results in the days and weeks that follow.</p>
+    <label class="sr" for="res-q">Find your state</label>
+    <input id="res-q" type="search" placeholder="Find your state" autocomplete="off" data-filter=".res-grid a">
+    <div class="res-grid">
+      {% for name, link in results %}<a href="{{ link }}" rel="noopener" data-name="{{ name|lower }}">{{ name }}<small>Official results →</small></a>{% endfor %}
+    </div>
+  </section>
+
+  {% if hotlines %}
+  <section class="help" aria-labelledby="help-h">
+    <h2 id="help-h">Trouble voting? Call for help.</h2>
+    <div class="lines">
+      {% for l in hotlines %}<a class="line" href="tel:+1{{ l.tel }}"><span>{{ l.label }}</span><strong>{{ l.show }}</strong><span>{{ l.num }}</span></a>{% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

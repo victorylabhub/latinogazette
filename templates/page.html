@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block canonical %}/{{ pg.slug ~ '/' if pg.slug else '' }}{% endblock %}
+{% block main %}
+<article class="story wrap page">
+  <header class="story-h">
+    <h1>{{ pg.title }}</h1>
+    {% if pg.description %}<p class="story-dek">{{ pg.description }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ pg.html|safe }}</div>
+  {% if pg.updated %}<p class="updated">Last updated <time datetime="{{ pg.updated.date().isoformat() }}">{{ pg.updated|apdate }}</time></p>{% endif %}
+</article>
+{% endblock %}

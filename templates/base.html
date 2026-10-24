@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title and page != 'home' %}{{ title }} | {% endif %}Latino Gazette{% if page == 'home' %} | {{ site.tagline }}{% endif %}</title>
+<meta name="description" content="{{ lede or site.description }}">
+{% if site.noindex %}<meta name="robots" content="noindex">{% endif %}
+<link rel="canonical" href="https://{{ site.domain }}{% block canonical %}{% endblock %}">
+<link rel="icon" href="/static/img/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="/static/img/icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="Latino Gazette" href="/rss.xml">
+<meta name="theme-color" content="#0A3A8F">
+<meta property="og:site_name" content="Latino Gazette">
+<meta property="og:title" content="{{ title or 'Latino Gazette' }}">
+<meta property="og:description" content="{{ lede or site.description }}">
+{% block og %}<meta property="og:type" content="website">
+<meta property="og:image" content="https://{{ site.domain }}/static/img/og.jpg">{% endblock %}
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/static/fonts/tinos-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/site.css?v={{ site.v }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"Latino Gazette","url":"https://{{ site.domain }}/",
+ "logo":"https://{{ site.domain }}/static/img/icon-512.png",
+ "ownershipFundingInfo":"https://{{ site.domain }}/about/","ethicsPolicy":"https://{{ site.domain }}/standards/",
+ "correctionsPolicy":"https://{{ site.domain }}/corrections/","email":{{ site.email|tojson }},
+ "parentOrganization":{"@type":"Organization","name":{{ site.owner|tojson }},"url":{{ site.owner_url|tojson }},"address":{{ site.address|tojson }}}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="wrap util">
+    <p class="today">{{ site.today|longdate }}</p>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sections" data-menu><span aria-hidden="true">☰</span> Sections</button>
+    <a class="btn-news" href="#newsletter">Get the newsletter</a>
+  </div>
+  <div class="wrap">
+    <div class="mast">
+      {% if page == 'home' %}<h1 class="logo">{% else %}<a class="logo" href="/">{% endif %}<span>LATINO</span> <b>GAZETTE</b>{% if page == 'home' %}</h1>{% else %}</a>{% endif %}
+      <p class="motto">{{ site.motto }}</p>
+    </div>
+  </div>
+  <nav class="secnav" id="sections" aria-label="Sections">
+    <ul class="wrap">
+      {% for s in sections %}<li><a href="/{{ s.slug }}/"{% if page == s.slug %} aria-current="page"{% endif %}>{{ s.name }}</a></li>{% endfor %}
+    </ul>
+  </nav>
+  {% if site.elections_on and page != 'elections' %}
+  <div class="ebar"><div class="wrap"><strong>Election 2026</strong>
+    {% if site.days_to_election > 1 %}<span>{{ site.days_to_election }} days to Nov. 3</span>{% elif site.days_to_election == 1 %}<span>Election Day is tomorrow</span>{% elif site.days_to_election == 0 %}<span>Election Day is today</span>{% endif %}
+    <a href="/how-to-vote/">How to vote</a><a href="/election-night/">Election night</a></div></div>
+  {% endif %}
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<section class="newsletter" id="newsletter" aria-labelledby="nl-h">
+  <div class="wrap nl-in">
+    <div>
+      <h2 id="nl-h">The Gazette Brief</h2>
+      <p>Our newsletter. We ask only for your email address and use it only to send the newsletter. <a href="/privacy/">Privacy notice</a>.</p>
+    </div>
+    <form name="newsletter" method="POST" action="/newsletter/thanks/" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <label class="sr" for="nl-email">Email address</label>
+      <input id="nl-email" type="email" name="email" required autocomplete="email" placeholder="Email address">
+      <button type="submit">Sign up</button>
+    </form>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <a class="logo" href="/"><span>LATINO</span> <b>GAZETTE</b></a>
+    <div class="fcols">
+      <div class="fown">
+        <p>{{ site.tagline }}</p>
+        <p>Latino Gazette is owned and published by <a href="{{ site.owner_url }}">{{ site.owner }}</a>, {{ site.address }}.</p>
+      </div>
+      <nav aria-label="Footer sections"><h2>Sections</h2>{% for s in sections %}<a href="/{{ s.slug }}/">{{ s.name }}</a>{% endfor %}</nav>
+      <nav aria-label="About"><h2>About</h2><a href="/about/">About us</a><a href="/standards/">Editorial standards</a><a href="/corrections/">Corrections</a><a href="/contact/">Contact</a><a href="/rss.xml">RSS</a></nav>
+      <nav aria-label="Voting"><h2>Official voting information</h2><a href="https://vote.gov">vote.gov</a><a href="https://www.eac.gov">eac.gov</a><a href="https://www.fvap.gov">fvap.gov</a><a href="/privacy/">Privacy notice</a></nav>
+    </div>
+    <p class="legal">© {{ site.year }} {{ site.owner }}. Latino Gazette is not affiliated with any other publication, website or organization with a similar name.</p>
+  </div>
+</footer>
+<script src="/static/site.js?v={{ site.v }}" defer></script>
+</body>
+</html>

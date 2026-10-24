@@ -1,0 +1,27 @@
+# Netlify builds the site from this repository. Publishing an article from
+# the newsroom (/admin/) commits to main and triggers a new deploy.
+[build]
+  command = "pip install -r requirements.txt && python3 build.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[redirects]]
+  from = "https://www.latinogazette.com/*"
+  to = "https://latinogazette.com/:splat"
+  status = 301
+  force = true
