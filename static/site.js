@@ -6,15 +6,16 @@
     btn.setAttribute("aria-expanded", open);
   });
 
-  // Countdown to Election Day (reader's local date)
-  var c = document.getElementById("countdown");
-  if (c) {
+  // Dates computed in the reader's browser so cached pages stay current
+  var n = new Date(); n.setHours(0, 0, 0, 0);
+  var t = document.querySelector("[data-today]");
+  if (t) t.textContent = n.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+  document.querySelectorAll("[data-countdown]").forEach(function (c) {
     var p = c.dataset.date.split("-"), e = new Date(+p[0], +p[1] - 1, +p[2]);
-    var n = new Date(); n.setHours(0, 0, 0, 0);
     var d = Math.round((e - n) / 86400000);
     c.textContent = d > 1 ? d + " days to Election Day" : d === 1 ? "Election Day is tomorrow"
       : d === 0 ? "Election Day is today" : "";
-  }
+  });
 
   // State picker → vote.gov
   var f = document.getElementById("picker");

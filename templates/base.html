@@ -32,7 +32,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
   <div class="wrap util">
-    <p class="today">{{ site.today|longdate }}</p>
+    <p class="today" data-today>{{ site.today|longdate }}</p>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sections" data-menu><span aria-hidden="true">☰</span> Sections</button>
     <a class="btn-news" href="#newsletter">Get the newsletter</a>
   </div>
@@ -49,7 +49,7 @@
   </nav>
   {% if site.elections_on and page != 'elections' %}
   <div class="ebar"><div class="wrap"><strong>Election 2026</strong>
-    {% if site.days_to_election > 1 %}<span>{{ site.days_to_election }} days to Nov. 3</span>{% elif site.days_to_election == 1 %}<span>Election Day is tomorrow</span>{% elif site.days_to_election == 0 %}<span>Election Day is today</span>{% endif %}
+    <span data-countdown data-date="{{ site.election_date }}"></span>
     <a href="/how-to-vote/">How to vote</a><a href="/election-night/">Election night</a></div></div>
   {% endif %}
 </header>
