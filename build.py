@@ -214,10 +214,11 @@ def build():
     later = [(STATE_NAME[c], s["last_et"]) for c, s in sorted(closing.get("states", {}).items(),
                                                             key=lambda x: STATE_NAME[x[0]])
              if s.get("last_et") and s["last_et"] != s.get("most_et")]
-    res = sorted(((STATE_NAME[c], r["url"]) for c, r in results.items()
+    res = sorted(((STATE_NAME[c], r["url"]) for c, r in results.get("states", {}).items()
                   if c in STATE_NAME and r.get("url")), key=lambda x: x[0])
+    local = [(STATE_NAME[l["state"]], l["text"]) for l in closing.get("local", [])]
     write("/election-night/", render(
-        "election_night.html", page="elections", groups=groups, later=later, results=res,
+        "election_night.html", page="elections", groups=groups, later=later, results=res, local=local,
         hotlines=hotlines, title="Election night 2026",
         lede="Poll closing times and links to every state's official results for the Nov. 3 general election."))
     write("/how-to-vote/", render(

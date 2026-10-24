@@ -1,0 +1,261 @@
+{
+ "verified": "2026-10-23",
+ "note": "Official results pages of each state election authority. Re-check on election night.",
+ "states": {
+  "ak": {
+   "url": "https://www.elections.alaska.gov/election-results/",
+   "source": "https://www.elections.alaska.gov/election-results/",
+   "note": "Division of Elections: polling places open 7:00 a.m.-8:00 p.m. (local). 8 p.m. AKST = 12:00 a.m. ET Nov 4. The official page does not mention time zones; the Aleutians west of 169\u00b030'W on Hawaii-Aleutian time (8 p.m. HST = 1:00 a.m. ET) is inferred from local-time hours, not stated by a primary source. Could not load the statute text on akleg.gov. The results page loads, but it lists elections through the 2025 REAA election and does not yet have a 2026 general entry."
+  },
+  "al": {
+   "url": "https://www.alabamavotes.gov/",
+   "source": "https://www.sos.alabama.gov/newsroom/secretary-state-wes-allen-announces-alabama-primary-election-results-are-available",
+   "note": "Polls 7 a.m.-7 p.m. CT (SOS one-pager, 2024 primary; Ala. Code 17-9-6). Under 17-9-6, polling places in areas on Eastern time open and close on Eastern time (7 p.m. ET), except that Chambers and Lee county commissions may opt them out. The statute text was read via Justia, not alison. The SOS says unofficial results are posted at AlabamaVotes.gov. The www2.alabamavotes.gov/electionnight page returned no content. The original sos.alabama.gov election-data URL loads but only holds official data downloads, not election-night results."
+  },
+  "ar": {
+   "url": "https://www.sos.arkansas.gov/elections/research/election-results",
+   "source": "https://www.sos.arkansas.gov/elections/research/election-results",
+   "note": "SOS: polls 7:30 a.m.-7:30 p.m. CT (also in the SOS 2026 election calendar PDF for Nov 3). The results page loads and says SOS is moving to a new ENR vendor. Its links go to arkansas.tally-enr.com (vendor domain); no 2026 general link yet."
+  },
+  "az": {
+   "url": "https://azsos.gov/elections/election-information/unofficial-enr",
+   "source": "https://azsos.gov/elections/election-information/unofficial-enr",
+   "note": "ARS 16-565: polls 6 a.m.-7 p.m.; 7 p.m. MST = 9 p.m. ET. In November the Navajo Nation (which observes DST) is also on MST, so it closes at the same time. The SOS ENR info page loads and says results appear after 8 p.m. results.arizona.vote loads with the title 'Arizona Election Results', but the SOS page's link target could not be confirmed."
+  },
+  "ca": {
+   "url": "https://electionresults.sos.ca.gov/",
+   "source": "https://vigarchive.sos.ca.gov/2022/general/voter-info/state-election-results-website.htm",
+   "note": "SOS: polls 7 a.m.-8 p.m. PT. Mailed ballots must be postmarked on or before Nov 3, and drop-off closes at 8 p.m. The official SOS voter guide names electionresults.sos.ca.gov as the state results site, but every fetch was blocked by Incapsula, so loading is unconfirmed."
+  },
+  "co": {
+   "url": "https://www.coloradosos.gov/pubs/elections/resultsData.html",
+   "source": "https://www.coloradosos.gov/pubs/elections/resultsData.html",
+   "note": "All-mail state. SOS: mail ballots must be received by the county clerk no later than 7:00 p.m. MT on Election Day (= 9 p.m. ET). The results page loads but links only to historical/archive data. No live ENR (Clarity) link was found on the SOS site yet."
+  },
+  "ct": {
+   "url": "https://portal.ct.gov/sots/election-services/election-results/election-results",
+   "source": "https://portal.ct.gov/sots/election-services/election-results/election-results",
+   "note": "SOTS: polls 6 a.m.-8 p.m. The results page loads and links to the live Election Management System at ctemspublic.pcctg.net (vendor domain) for electronic results."
+  },
+  "dc": {
+   "url": "https://electionresults.dcboe.org/",
+   "source": "https://www.dcboe.org/",
+   "note": "DCBOE: Election Day Vote Centers open 7:00 a.m.-8:00 p.m. on Nov 3, 2026. The results site is linked as 'Election Results' from dcboe.org and its 2026 elections page. It loads, but its content is dynamic."
+  },
+  "de": {
+   "url": "https://elections.delaware.gov/results/index.html",
+   "source": "https://elections.delaware.gov/elections/general/general.html",
+   "note": "Department of Elections: polling places open 7 a.m.-8 p.m. on Nov 3, 2026. The general-election page links results/index.html; the .shtml version also loads. The 2026 primary's ENR was at results/enr/PR2026.html."
+  },
+  "fl": {
+   "url": "https://floridaelectionwatch.gov/",
+   "source": "https://dos.fl.gov/communications/press-releases/2024/press-release-secretary-byrd-announces-polls-open-statewide-on-general-election-day/",
+   "note": "s. 100.011: polls 7 a.m.-7 p.m. local (county-seat standard time). The DOS says the state spans the Eastern and Central zones, so the Central-time Panhandle closes at 8 p.m. ET. Recommend floridaelectionwatch.gov, the DOS live election-night site (footer: Division of Elections; already set up for 2026; posts preliminary results from 8 p.m. ET). The original results.elections.myflorida.com is labeled 'Election Results Archive Access' on dos.fl.gov."
+  },
+  "ga": {
+   "url": "https://results.sos.ga.gov/results/public/Georgia",
+   "source": "https://sos.ga.gov/page/georgia-election-results",
+   "note": "Polls 7 a.m.-7 p.m. ET (single time zone), per official state portal georgia.gov (O.C.G.A. 21-2-403); the statute site legis.ga.gov did not render. The results portal is linked from sos.ga.gov ('Election Results from July 2012 to Present'). It is a JS app whose content was not visible to the fetcher. sos.ga.gov/page/election-results also loads but only lists historical results."
+  },
+  "hi": {
+   "url": "https://elections.hawaii.gov/election-results/",
+   "source": "https://elections.hawaii.gov/",
+   "note": "All-mail state. The 2026 Office of Elections brochure says ballots must be received by 7:00 p.m. HST on Election Day, which is 12:00 a.m. ET on Nov. 4. HRS 11-109 says voter service centers stay open until the closing hour of voting. Results page loads; it currently lists the Aug. 8, 2026 primary reports."
+  },
+  "ia": {
+   "url": "https://electionresults.iowa.gov/IA/",
+   "source": "https://sos.iowa.gov/",
+   "note": "Iowa Code 49.73(2): polls close at 8:00 p.m. CT (= 9 p.m. ET). The sos.iowa.gov homepage links 'Election Results' to https://electionresults.iowa.gov/IA/. That page loads ('List Elections', a JS app) but its contents were not visible to the fetcher."
+  },
+  "id": {
+   "url": "https://voteidaho.gov/election-results/",
+   "source": "https://voteidaho.gov/election-results/",
+   "note": "I.C. 34-1101: polls 8 a.m.-8 p.m. local time. Most of the state is in Mountain time (10 p.m. ET); the northern Panhandle is in Pacific time (11 p.m. ET). The statute does not name time zones; that split is geographic. The landing page loads; live ENR runs at results.voteidaho.gov/results/public/id/elections/<election>, for example may2026."
+  },
+  "il": {
+   "url": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx",
+   "source": "https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx",
+   "note": "ISBE: polls open 6:00 a.m.-7:00 p.m. CT (= 8 p.m. ET). The ILCS site blocked fetching. The ISBE vote-totals page loads (latest election listed: 2025 Consolidated). There is no statewide election-night ENR; local election authorities report results."
+  },
+  "in": {
+   "url": "https://enr.indianavoters.in.gov/site/index.html",
+   "source": "https://www.in.gov/sos/elections/",
+   "note": "IC 3-11-8-8: polls 6 a.m.-6 p.m. local time. Eastern counties close at 6 p.m. ET; NW and SW Central-time counties close at 7 p.m. ET. Statute text came from a Justia mirror because iga.in.gov did not render. The ENR page is linked from in.gov/sos/elections as 'General Election Results' and carries the state seal."
+  },
+  "ks": {
+   "url": "https://sos.ks.gov/elections/election-results.html",
+   "source": "https://sos.ks.gov/",
+   "note": "K.S.A. 25-106: the default close is 7 p.m. local time. Counties may set close as late as 8 p.m. CT / 7 p.m. MT (= 9 p.m. ET in either zone). The 4 Mountain-time counties close at 9 p.m. ET or later. The SOS posts an election-night reporting page on sos.ks.gov on election day (2024 press releases); its URL was not confirmed. The listed page holds official results."
+  },
+  "ky": {
+   "url": "https://elect.ky.gov/results/2020-2029/Pages/2026.aspx",
+   "source": "https://elect.ky.gov/results/",
+   "note": "SBE: polls open 6:00 a.m.-6:00 p.m. local time on Nov. 3, 2026. Eastern-time areas close at 6 p.m. ET; Central-time western KY closes at 7 p.m. ET. The 2026 results page has an 'Unofficial General Election Results' section (statewide and county), so it is better than the /results/ index."
+  },
+  "la": {
+   "url": "https://voterportal.sos.la.gov/graphical",
+   "source": "https://voterportal.sos.la.gov/graphical",
+   "note": "La. R.S. 18:541: polls close at 8:00 p.m. CT (= 9 p.m. ET). The page loads with LA SOS branding ('Geaux Vote', SOS seal, (c) 2026 Louisiana Department of State)."
+  },
+  "ma": {
+   "url": "https://electionstats.state.ma.us/",
+   "source": "https://electionstats.state.ma.us/",
+   "note": "M.G.L. c.54 s.64: at state elections polls close at 8 p.m. ET. PD43+ is run by the Secretary of the Commonwealth and loads (last updated Sep 1, 2026). It holds certified results; there is no statewide election-night ENR."
+  },
+  "md": {
+   "url": "https://elections.maryland.gov/elections/2026/index.html",
+   "source": "https://elections.maryland.gov/elections/2026/index.html",
+   "note": "Election Law 10-301(a): polls open 7 a.m.-8 p.m.; the SBE 2026 page also says polls are open 7:00 am-8:00 pm on Nov 3, 2026. The 2026 page loads and links to the 2026 primary results (/elections/2026/primary_results/index.html), so general results should be linked from it. There is no general-results page yet; do not guess its path. The 2024 general results moved to /elections/archive/2024/General_Results/index.html."
+  },
+  "me": {
+   "url": "https://www.maine.gov/sos/elections-voting/election-results-data",
+   "source": "https://www.maine.gov/sos/elections-voting/election-results-data",
+   "note": "21-A MRSA 626(2): polls close at 8 p.m. Towns under 100 residents may close early once all voters have voted. Results are posted as Excel/PDF files; Maine has no live ENR."
+  },
+  "mi": {
+   "url": "https://www.michigan.gov/sos/elections/election-results-and-data",
+   "source": "https://www.michigan.gov/sos/elections",
+   "note": "MCL 168.720: polls open 7 a.m.-8 p.m. local. Gogebic, Iron, Dickinson and Menominee counties are in Central time, so they close at 9 p.m. ET. The landing page loaded on the second attempt and lists a Nov 3, 2026 General entry pointing to mvic.sos.state.mi.us/votehistory/Index?type=C&electionDate=11-3-2026. That MVIC URL could not be fetched directly."
+  },
+  "mn": {
+   "url": "https://electionresults.sos.mn.gov/20261103",
+   "source": "https://electionresults.sos.mn.gov/20261103",
+   "note": "Minn. Stat. 204C.05: 7 a.m.-8 p.m. CT, which is 9 p.m. ET. Some small towns may open late but all close at 8 p.m. The election-specific page /20261103 loads for the Nov 3, 2026 State General (currently TEST RESULTS) and is better than the root URL, which still shows the Aug 11 primary."
+  },
+  "mo": {
+   "url": "https://enr.sos.mo.gov/",
+   "source": "https://www.sos.mo.gov/elections/results",
+   "note": "RSMo 115.407: polls open 6 a.m.-7 p.m. CT, which is 8 p.m. ET. The ENR site loads and still shows the Aug 4, 2026 primary. It is linked from sos.mo.gov/elections/results."
+  },
+  "ms": {
+   "url": "https://www.sos.ms.gov/elections-voting/election-results",
+   "source": "https://www.sos.ms.gov/elections-voting/election-results",
+   "note": "The SOS 2026 calendar says that on Nov 3 polls are open 7 a.m.-7 p.m. (Miss. Code 23-15-833). That is 7 p.m. CT, or 8 p.m. ET. The results page loads but has no Nov 2026 general entry yet; results are posted as per-election pages."
+  },
+  "mt": {
+   "url": "https://sosmt.gov/elections/results/",
+   "source": "https://sosmt.gov/elections/results/",
+   "note": "MCA 13-1-106: polls open 7 a.m.-8 p.m. MT, which is 10 p.m. ET. Small precincts may open at noon. The results page says 2026 general results post after 8:00 on Nov 3. sosmt.gov/elections also links 'Election Night Reporting' at mtelectionresults.gov, which could not be fetched (blocked)."
+  },
+  "nc": {
+   "url": "https://er.ncsbe.gov/",
+   "source": "https://www.ncsbe.gov/results-data",
+   "note": "G.S. 163-166.25(a), recodified from 163-166.01 in 2024: polls open 6:30 a.m.-7:30 p.m. The State Board may extend individual sites' closing times after delays of more than 15 minutes. ncsbe.gov/results-data links er.ncsbe.gov as the live dashboard. That dashboard is a JS app and showed no election when fetched."
+  },
+  "nd": {
+   "url": "https://resultsnd.sos.nd.gov/#election=348",
+   "source": "https://www.sos.nd.gov/elections/election-results",
+   "note": "NDCC 16.1-01-03 only sets a window: polls close at 7 p.m. or later and no later than 9 p.m. local, with each city or county setting its own time by resolution. No official statewide list of actual closing times was found. Under the statute the earliest close is 8 p.m. ET (7 p.m. CT) and the latest possible is 11 p.m. ET (9 p.m. MT, SW counties). The 8/9 p.m. ET values are unverified. The SOS links the Nov 3, 2026 General as resultsnd.sos.nd.gov/#election=348. The old results.sos.nd.gov still shows the 2024 general."
+  },
+  "ne": {
+   "url": "https://electionresults.nebraska.gov/",
+   "source": "https://sos.nebraska.gov/elections",
+   "note": "Neb. Rev. Stat. 32-908: Central zone 8 a.m.-8 p.m. CT, Mountain zone 7 a.m.-7 p.m. MT, so both close at 9 p.m. ET. The ENR site loads, is set up for the Nov 3, 2026 General with 0 of 1322 precincts, and is linked from sos.nebraska.gov/elections as Unofficial Election Results."
+  },
+  "nh": {
+   "url": "https://www.sos.nh.gov/2026-general-election-results",
+   "source": "https://www.sos.nh.gov/elections (links 2026 Election Results -> 2026 General Election Results)",
+   "note": "RSA 659:4 says polls close no earlier than 7 p.m. (ET), with towns and cities setting their own hours. No primary source was found listing the towns that close at 8 p.m., so last_et of 8 p.m. is unconfirmed. The SOS page for the 2026 general election exists. Tallies are posted by race and county as town clerks report them, not as live ENR. The old /elections/elections/election-results URL now returns Forbidden."
+  },
+  "nj": {
+   "url": "https://www.nj.gov/state/elections/election-information-results.shtml",
+   "source": "https://www.nj.gov/state/elections/election-information-results.shtml",
+   "note": "Polls are open 6 a.m.-8 p.m. under current statute. Bill A556, pending, would move closing to 9 p.m. but is not law. Mail ballots must be in a drop box or BOE office by 8 p.m., or postmarked by Election Day and received by Nov 9. The state page is an archive. The state has no live statewide ENR: election-night counts come from county clerks, and the state posts periodic county PDFs at https://www.nj.gov/state/elections/election-results-information.shtml."
+  },
+  "nm": {
+   "url": "https://electionresults.sos.nm.gov/",
+   "source": "https://electionresults.sos.nm.gov/",
+   "note": "Polls close at 7 p.m. MT, which is 9 p.m. ET, and the whole state is on Mountain time. The 7-7 hours come from the 2022 SOS/AG advisory; the statute text could not be fetched. Absentee ballots must be received by 7 p.m. on Election Day. The ENR site is already set up for the Nov 3, 2026 general election."
+  },
+  "nv": {
+   "url": "https://silverstateelection.nv.gov/",
+   "source": "https://silverstateelection.nv.gov/ (loaded in a browser; the page is titled 'Nevada Secretary of State 2026 Primary Election Results' and links back to nvsos.gov)",
+   "note": "Polls are open 7 a.m.-7 p.m. PT, closing at 10 p.m. ET; voters in line at 7 p.m. may still vote. Mail ballots postmarked by Election Day count if received by 5 p.m. on the 4th day after it. The site sits behind Incapsula bot protection, which blocks plain fetches, so it was confirmed in a real browser. It still shows the 2026 primary and should switch to the general."
+  },
+  "ny": {
+   "url": "https://nyenr.elections.ny.gov/",
+   "source": "https://nyenr.elections.ny.gov/",
+   "note": "Election Law 8-100 sets general election hours at 6 a.m.-9 p.m. The State Board's unofficial ENR page loads, is set up for the 2026 general (Governor, 0 of 13,072 EDs reporting), and says polls close at 9 PM. Use it instead of elections.ny.gov/election-results, which holds certified results and the archive."
+  },
+  "oh": {
+   "url": "https://liveresults.ohiosos.gov/",
+   "source": "https://liveresults.ohiosos.gov/",
+   "note": "ORC 3501.32 sets polls at 6:30 a.m.-7:30 p.m. ET. The site loads as 'Ohio Decides - Election Night Reporting' and is marked an official State of Ohio site. It currently shows prior (primary) data."
+  },
+  "ok": {
+   "url": "https://oklahoma.gov/elections/elections-results/election-results/2026-election-results.html",
+   "source": "https://oklahoma.gov/elections/elections-results/election-results/2026-election-results.html",
+   "note": "Polls are open 7 a.m.-7 p.m. CT, closing at 8 p.m. ET. The State Election Board's 2026 page lists the Nov 3 general. Each election's page links to the live OK Election Results Page; for June it was https://results.okelections.us/OKER/?elecDate=20260616, so Nov 3 is likely ?elecDate=20261103. That live host returned 403 to us, so the deep link is unconfirmed."
+  },
+  "or": {
+   "url": "https://sos.oregon.gov/elections/Pages/current-election.aspx",
+   "source": "results.oregonvotes.gov now redirects to https://sos.oregon.gov/Pages/default.aspx",
+   "note": "This is an all-mail state. Ballots must be dropped off by 8 p.m. local on Nov 3 (11 p.m. ET); mailed ballots postmarked by Election Day count if received by Nov 10. Most of Malheur County is on Mountain time (10 p.m. ET), which was not separately verified. results.oregonvotes.gov now redirects to the SOS homepage, and no 2026 statewide ENR link was found on sos.oregon.gov; the current-election page is the fallback. Recheck on election night."
+  },
+  "pa": {
+   "url": "https://www.electionreturns.pa.gov/",
+   "source": "https://www.pa.gov/agencies/vote/elections/election-results (links to it); loaded directly in a browser",
+   "note": "Polls are open 7 a.m.-8 p.m. Mail ballots must be received by the county by 8 p.m. on Nov 3. The site loads as '2026 General Election (Unofficial Returns)' in TESTING MODE with fake data, and says live county data will appear after polls close at 8 p.m. Nov 3."
+  },
+  "ri": {
+   "url": "https://electionresults.ri.gov/results/public/rhodeisland",
+   "source": "https://elections.ri.gov/elections/previous-election-results (links to electionresults.ri.gov)",
+   "note": "Polls are open 7 a.m.-8 p.m.; New Shoreham opens at 9 a.m. but closes at 8 p.m. The Board of Elections results portal loads and lists the 2026 primary (Sept 9), with the general expected to be added."
+  },
+  "sc": {
+   "url": "https://scvotes.gov/election-results/",
+   "source": "https://scvotes.gov/election-results/",
+   "note": "Whole state on Eastern time: 7 p.m. local = 7:00 p.m. ET. Results page loads; it lists 2026 elections with links to enr-scvotes.org. No link yet for the Nov 3 general."
+  },
+  "sd": {
+   "url": "https://electionresults.sd.gov/",
+   "source": "https://sdsos.gov/elections-voting/default.aspx (links to electionresults.sd.gov/Default.aspx)",
+   "note": "Polls close 7 p.m. local. That is 8:00 p.m. ET in the Central-time east and 9:00 p.m. ET in the Mountain-time west. On Oct 22 the results site showed the Nov 3, 2026 general with 'Testing In Progress'."
+  },
+  "tn": {
+   "url": "https://elections.tn.gov/",
+   "source": "https://elections.tn.gov/",
+   "note": "All polls close at the same moment: 8 p.m. Eastern / 7 p.m. Central = 8:00 p.m. ET. The results page loads with TN SOS branding, headed 'Tennessee Unofficial Election Results'. Opening times vary by county."
+  },
+  "tx": {
+   "url": "https://goelect.txelections.civixapps.com/ivis-enr-ui/races",
+   "source": "https://www.sos.state.tx.us/elections/historical/index.shtml (links 'Official Election Results (ENR)' to this URL)",
+   "note": "7 p.m. local. That is 8:00 p.m. ET in Central time and 9:00 p.m. ET in El Paso and Hudspeth counties (Mountain time). The ENR app loads ('Election Night Results'). The old results.texas-election.com in the 2024 release is superseded."
+  },
+  "ut": {
+   "url": "https://vote.utah.gov/election-results-data-historical-information",
+   "source": "https://vote.utah.gov/election-results-data-historical-information",
+   "note": "Mostly vote by mail. Ballots must be RECEIVED by 8 p.m. MT; a postmark is no longer enough (2025 law). In-person polls also close 8 p.m. MT = 10:00 p.m. ET. The live statewide ENR is probably https://electionresults.utah.gov/results/public/Utah: Washington County (an official county site) links it as 'State of Utah Election Results', and it loads. No link to it from vote.utah.gov was found, so it is not swapped in."
+  },
+  "va": {
+   "url": "https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General",
+   "source": "https://www.elections.virginia.gov/resultsreports/election-results/ (links 'November 3, 2026 General and Special Elections' to this URL)",
+   "note": "Whole state on Eastern time. Swapped in the ENR page for this specific election, which is linked from ELECT. The general landing page is https://www.elections.virginia.gov/resultsreports/election-results/."
+  },
+  "vt": {
+   "url": "https://electionresults.vermont.gov/",
+   "source": "https://sos.vermont.gov/elections/election-info-resources/elections-results-data/ (links 'Election Night Results')",
+   "note": "Opening times vary by town (5-10 a.m.); all polls close at 7 p.m. Eastern. The results page loads, titled 'Vermont Election Night Results'."
+  },
+  "wa": {
+   "url": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets",
+   "source": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets",
+   "note": "All-mail state. Drop-off closes 8 p.m. PT = 11:00 p.m. ET; a ballot postmarked by Election Day still counts if it arrives later. The page has a row for the 11/3/2026 general but no link yet. 2026 elections use results.votewa.gov/results/public/washington/elections/YYYYMMDD (e.g. 20260804); the Nov one is probably .../20261103, but that is unconfirmed."
+  },
+  "wi": {
+   "url": "https://elections.wi.gov/elections/election-results",
+   "source": "https://elections.wi.gov/elections/election-results",
+   "note": "Whole state on Central time: 8 p.m. CT = 9:00 p.m. ET. WEC has no statewide election-night results site. Counties post unofficial results, and WEC posts only certified results. The page loads but still shows 2022 downloads."
+  },
+  "wv": {
+   "url": "https://sos.wv.gov/elections/election-data/historical-election-results-and-turnout",
+   "source": "https://sos.wv.gov/elections/election-data/historical-election-results-and-turnout (WVSOS links every recent election to results.enr.clarityelections.com/WV/..., e.g. 2026 Primary https://results.enr.clarityelections.com/WV/126209/web.345435/#/summary, 2024 General .../WV/122766/...)",
+   "note": "Whole state on Eastern time. WVSOS publishes election-night reporting on the vendor-hosted Clarity ENR (not a .gov domain); sos.wv.gov links to it. The /WV/ root loads, but its election list was empty when fetched. The Nov 3, 2026 election-specific link has not been posted yet; check the WVSOS historical results page on election night. Unofficial write-in results come from county clerks only."
+  },
+  "wy": {
+   "url": "https://sos.wyo.gov/Elections/ElectionResults.aspx",
+   "source": "https://sos.wyo.gov/Elections/ElectionResults.aspx",
+   "note": "Whole state on Mountain time: 7 p.m. MT = 9:00 p.m. ET. Hours confirmed from 2024/2026 primary SOS releases (no general-specific statement found). The page loads, but no separate election-night results page is linked; only official 2026 primary results are posted."
+  }
+ }
+}

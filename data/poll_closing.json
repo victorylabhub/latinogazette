@@ -1,0 +1,359 @@
+{
+ "verified": "2026-10-23",
+ "note": "Eastern Standard Time on Nov. 3, 2026. Each state verified against its statute or official election website (see source). States whose closing time is set locally are listed under local.",
+ "states": {
+  "ak": {
+   "most_et": "12:00 a.m.",
+   "last_et": "12:00 a.m.",
+   "source": "https://www.elections.alaska.gov/election-polls/"
+  },
+  "al": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://www.sos.alabama.gov/sites/default/files/press/Election%20Day%20Information%20One%20Pager.pdf"
+  },
+  "ar": {
+   "most_et": "8:30 p.m.",
+   "last_et": "8:30 p.m.",
+   "source": "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information/voting-in-arkansas"
+  },
+  "az": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.azleg.gov/ars/16/00565.htm"
+  },
+  "ca": {
+   "most_et": "11:00 p.m.",
+   "last_et": "11:00 p.m.",
+   "source": "https://www.sos.ca.gov/elections/upcoming-elections/general-election-november-3-2026"
+  },
+  "co": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.sos.state.co.us/pubs/elections/FAQs/mailBallotsFAQ.html"
+  },
+  "ct": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://portal.ct.gov/sots/election-services/voter-information/where-and-how-do-i-vote"
+  },
+  "dc": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://dcboe.org/getmedia/e076a79c-6f32-41fe-81a0-7f33c549b957/Time-Off-to-Vote-2026-General-STUDENTS.pdf"
+  },
+  "de": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://elections.delaware.gov/elections/general/general.html"
+  },
+  "fl": {
+   "most_et": "7:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0100/Sections/0100.011.html"
+  },
+  "ga": {
+   "most_et": "7:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://georgia.gov/node/27586"
+  },
+  "hi": {
+   "most_et": "12:00 a.m.",
+   "last_et": "12:00 a.m.",
+   "source": "https://elections.hawaii.gov/wp-content/uploads/Vote-by-Mail-Brochure-2026-Elections-English.pdf"
+  },
+  "ia": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.legis.iowa.gov/docs/code/49.73.pdf"
+  },
+  "id": {
+   "most_et": "10:00 p.m.",
+   "last_et": "11:00 p.m.",
+   "source": "https://legislature.idaho.gov/statutesrules/idstat/title34/t34ch11/sect34-1101/"
+  },
+  "il": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://elections.il.gov/electiondayhome.aspx"
+  },
+  "in": {
+   "most_et": "6:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://law.justia.com/codes/indiana/title-3/article-11/chapter-8/section-3-11-8-8/"
+  },
+  "ks": {
+   "most_et": "8:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.ksrevisor.gov/statutes/chapters/ch25/025_001_0006.html"
+  },
+  "ky": {
+   "most_et": "6:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://elect.ky.gov/Frequently-Asked-Questions/Pages/Election-Day-Information.aspx"
+  },
+  "la": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.legis.la.gov/legis/Law.aspx?d=81634"
+  },
+  "ma": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVIII/Chapter54/Section64"
+  },
+  "md": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gel&section=10-301&enactments=false"
+  },
+  "me": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://legislature.maine.gov/statutes/21-A/title21-Asec626.html"
+  },
+  "mi": {
+   "most_et": "8:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-168-720 ; zone boundary 49 CFR 71.5 https://www.govinfo.gov/content/pkg/CFR-2024-title49-vol1/xml/CFR-2024-title49-vol1-sec71-5.xml"
+  },
+  "mn": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.revisor.mn.gov/statutes/cite/204C.05"
+  },
+  "mo": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://revisor.mo.gov/main/OneSection.aspx?section=115.407"
+  },
+  "ms": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://www.sos.ms.gov/sites/default/files/elections/2026%20Elections%20Calendar.pdf"
+  },
+  "mt": {
+   "most_et": "10:00 p.m.",
+   "last_et": "10:00 p.m.",
+   "source": "https://mca.legmt.gov/bills/mca/title_0130/chapter_0010/part_0010/section_0060/0130-0010-0010-0060.html"
+  },
+  "nc": {
+   "most_et": "7:30 p.m.",
+   "last_et": "7:30 p.m.",
+   "source": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_163/GS_163-166.25.html"
+  },
+  "ne": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://nebraskalegislature.gov/laws/statutes.php?statute=32-908"
+  },
+  "nj": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "R.S.19:15-2, current text quoted in https://pub.njleg.gov/Bills/2026/A1000/556_I1.HTM (6 a.m.-8 p.m.); deadlines at https://www.nj.gov/state/elections/vote-by-mail.shtml"
+  },
+  "nm": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.nmag.gov/wp-content/uploads/2022/10/2022-GE-SOS-AG-Voter-Advisory_FINAL.pdf; https://www.sos.nm.gov/voting-and-elections/voter-information-portal-nmvote-org/returning-your-absentee-ballot/"
+  },
+  "nv": {
+   "most_et": "10:00 p.m.",
+   "last_et": "10:00 p.m.",
+   "source": "https://www.nvsos.gov/sos/sos-information/office-facts/faqs-all-division/elections; NRS 293.273(1) via https://nevada.public.law/statutes/nrs_293.273"
+  },
+  "ny": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://www.nysenate.gov/legislation/laws/ELN/8-100"
+  },
+  "oh": {
+   "most_et": "7:30 p.m.",
+   "last_et": "7:30 p.m.",
+   "source": "https://codes.ohio.gov/ohio-revised-code/section-3501.32"
+  },
+  "ok": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://oklahoma.gov/elections/elections-results/next-election.html"
+  },
+  "or": {
+   "most_et": "11:00 p.m.",
+   "last_et": "11:00 p.m.",
+   "source": "https://sos.oregon.gov/elections/Pages/current-election.aspx; ORS 254.470 via https://oregon.public.law/statutes/ors_254.470"
+  },
+  "pa": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://www.pa.gov/agencies/dos/programs/voting-and-elections/upcoming-elections"
+  },
+  "ri": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://vote.sos.ri.gov/Elections/PollingPlaceHours"
+  },
+  "sc": {
+   "most_et": "7:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://www.scstatehouse.gov/code/t07c013.php (S.C. Code 7-13-60: polls open 7 a.m., close 7 p.m.); also https://scvotes.gov/voters/how-to-vote/"
+  },
+  "sd": {
+   "most_et": "8:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://sdsos.gov/elections-voting/voting/ (\"Polls are open from 7 a.m. to 7 p.m. local time\"); 2026 Election Worker Training PDF on sdsos.gov"
+  },
+  "tn": {
+   "most_et": "8:00 p.m.",
+   "last_et": "8:00 p.m.",
+   "source": "https://sos.tn.gov/node/1640 (\"Polls close at 8 p.m. in the Eastern Time Zone and 7 p.m. in the Central Time Zone\"); https://sos.tn.gov/node/798"
+  },
+  "tx": {
+   "most_et": "8:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "Tex. Elec. Code 41.031 (polls close 7 p.m.; text read via texas.public.law because statutes.capitol.texas.gov did not render); https://www.sos.texas.gov/about/newsreleases/2024/110524.shtml (\"7 a.m. to 7 p.m. at all polling places statewide\", a 2024 release)"
+  },
+  "ut": {
+   "most_et": "10:00 p.m.",
+   "last_et": "10:00 p.m.",
+   "source": "Utah Code 20A-3a-204(3)(a) (https://le.utah.gov/xcode/Title20A/Chapter3A/C20A-3a-S204_2025050720250507.html): a mailed ballot \"must be received by the election officer on or before 8 p.m. on election day\"; Utah Code 20A-1-302: polls 7 a.m.-8 p.m."
+  },
+  "va": {
+   "most_et": "7:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://law.lis.virginia.gov/vacode/title24.2/chapter6/section24.2-603/ (polls 6 a.m.-7 p.m.)"
+  },
+  "vt": {
+   "most_et": "7:00 p.m.",
+   "last_et": "7:00 p.m.",
+   "source": "https://legislature.vermont.gov/statutes/section/17/051/02561 (17 V.S.A. 2561: \"polls in all polling places shall close at 7:00 p.m.\")"
+  },
+  "wa": {
+   "most_et": "11:00 p.m.",
+   "last_et": "11:00 p.m.",
+   "source": "https://app.leg.wa.gov/RCW/default.aspx?cite=29A.40.091 (RCW 29A.40.091(4): return to the auditor by 8:00 p.m. on election day, or mail with a postmark no later than election day)"
+  },
+  "wi": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://elections.wi.gov/node/2712 (\"Polls are open from 7 a.m. to 8 p.m.\")"
+  },
+  "wv": {
+   "most_et": "7:30 p.m.",
+   "last_et": "7:30 p.m.",
+   "source": "https://code.wvlegislature.gov/3-1-31/ (polls open 6:30 a.m., close 7:30 p.m.); https://sos.wv.gov/media/467/download (WVSOS 2026 Elections Calendar: Nov 3 'Polls open at 6:30 a.m. and close at 7:30 p.m.')"
+  },
+  "wy": {
+   "most_et": "9:00 p.m.",
+   "last_et": "9:00 p.m.",
+   "source": "https://sos.wyo.gov/Media/2026/SoS_Release_2026-08-18.pdf (\"Polls ... close at 7:00 p.m.\") and https://sos.wyo.gov/Media/2024/SoS_Release_2024-08-16.pdf (7:00 a.m.-7:00 p.m.); W.S. 22-13-117 (no admission after 7:00 p.m.; text read via secondary mirror)"
+  }
+ },
+ "groups": [
+  {
+   "et": "6:00 p.m.",
+   "states": [
+    "in",
+    "ky"
+   ]
+  },
+  {
+   "et": "7:00 p.m.",
+   "states": [
+    "fl",
+    "ga",
+    "sc",
+    "va",
+    "vt"
+   ]
+  },
+  {
+   "et": "7:30 p.m.",
+   "states": [
+    "nc",
+    "oh",
+    "wv"
+   ]
+  },
+  {
+   "et": "8:00 p.m.",
+   "states": [
+    "al",
+    "ct",
+    "dc",
+    "de",
+    "il",
+    "ks",
+    "ma",
+    "md",
+    "me",
+    "mi",
+    "mo",
+    "ms",
+    "nj",
+    "ok",
+    "pa",
+    "ri",
+    "sd",
+    "tn",
+    "tx"
+   ]
+  },
+  {
+   "et": "8:30 p.m.",
+   "states": [
+    "ar"
+   ]
+  },
+  {
+   "et": "9:00 p.m.",
+   "states": [
+    "az",
+    "co",
+    "ia",
+    "la",
+    "mn",
+    "ne",
+    "nm",
+    "ny",
+    "wi",
+    "wy"
+   ]
+  },
+  {
+   "et": "10:00 p.m.",
+   "states": [
+    "id",
+    "mt",
+    "nv",
+    "ut"
+   ]
+  },
+  {
+   "et": "11:00 p.m.",
+   "states": [
+    "ca",
+    "or",
+    "wa"
+   ]
+  },
+  {
+   "et": "12:00 a.m.",
+   "states": [
+    "ak",
+    "hi"
+   ]
+  }
+ ],
+ "local": [
+  {
+   "state": "nd",
+   "text": "Set by each county or city, between 7 and 9 p.m. local time.",
+   "source": "https://ndlegis.gov/cencode/t16-1c01.pdf (N.D.C.C. 16.1-01-03)"
+  },
+  {
+   "state": "nh",
+   "text": "Set by each town, no earlier than 7 p.m.",
+   "source": "https://gc.nh.gov/rsa/html/LXIII/659/659-4.htm (RSA 659:4)"
+  }
+ ]
+}

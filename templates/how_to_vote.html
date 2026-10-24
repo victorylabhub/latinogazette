@@ -50,13 +50,13 @@
   {% if hotlines %}
   <section class="help" id="help" aria-labelledby="help-h">
     <h2 id="help-h">Trouble voting? Call for help.</h2>
-    <p>Free, nonpartisan hotlines run by the Election Protection coalition.</p>
+    <p>Free, nonpartisan hotlines.</p>
     <div class="lines">
-      {% for l in hotlines %}<a class="line" href="tel:+1{{ l.tel }}"><span>{{ l.label }}</span><strong>{{ l.show }}</strong><span>{{ l.num }}</span></a>{% endfor %}
+      {% for l in hotlines %}<a class="line" href="tel:+1{{ l.tel }}"><span>{{ l.label }}</span><strong>{{ l.show }}</strong><span>{{ l.num }} · {{ l.by }}</span></a>{% endfor %}
     </div>
-    <p class="src">Source: <a href="https://866ourvote.org">Election Protection</a></p>
+    <p class="src">Sources: {% for l in hotlines %}<a href="{{ l.source }}">{{ l.by }}</a>{{ '; ' if not loop.last }}{% endfor %}</p>
   </section>
   {% endif %}
-  <p class="updated">Last reviewed <time datetime="{{ site.today.isoformat() }}">{{ site.today|apdate }}</time>. Rules change; always confirm with your election office.</p>
+  <p class="updated">Last reviewed <time datetime="{{ site.today.isoformat() }}">{{ site.today|apdate }}</time>.</p>
 </article>
 {% endblock %}
